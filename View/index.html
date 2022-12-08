@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indonesia Question Answering System</title>
+  <link rel="stylesheet" href="../public/css/style.css" />
+</head>
+
+<body>
+
+  <!--Bagian header-->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img width="40" height="40" alt="" src="../public/assets/Universitas-Sriwijaya-Logo.png" />
+        <img width="65" height="40" alt="" src="../public/assets/logo_airlab.jpeg" />
+      </div>
+      <div class="menu">
+        <ul>
+          <li><button>Manual</button></li>
+        </ul>
+      </div>
+
+      <!--Bagian card-->
+      <div class="container">
+        <div class="card">
+          <p>
+            Pencarian Jawaban Nama Orang Pada Sistem Tanya Jawab Berbahasa Indonesia
+            <br />
+            Menggunakan Linked Open Data DBpedia
+          </p>
+          <div class="form-input">
+            <div class="form">
+              <form action="" style="background-color: #59c1bd">
+                <input type="text" name="pertanyaan" id="pertanyaan" class="input" placeholder="Masukan Pertanyaan" />
+                <div class="btn">
+                  <input name="submit" id="submit" class="cari" value="Cari" />
+                  <input name="reset" id="reset" type="reset" class="reset" />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="jawaban" name="jawaban">
+            <table id="table" name="table">
+              <tr>
+                <td style="padding: 30px;">Query Sparql</td>
+                <td><textarea type="textarea" name="query" id="query"></textarea>
+              </tr>
+              <tr>
+                <td>Jawaban</td>
+                <td><textarea type="text" name="jawaban" id="jawaban"></textarea></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="../public/js/hitApi.js"></script>
+
+</html>
