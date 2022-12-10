@@ -17,27 +17,9 @@ class Api(Resource):
         if(input):
             processing = Processing()
 
-            processing.setInput(input)
-
-            getInput = processing.getInput()
-            getQuery = processing.getQuery()
-            setSparQL = processing.setSparQL()
-            sendQuery = processing.sendQuery()
-            getHasil = processing.getHasil()
-
+            result = processing.process(input)
             return {
-                "data":{
-                    "input" : input,
-                    "getInput" : getInput,
-                    "getQuery" : getQuery,
-                    "setSparQL":setSparQL,
-                    "sendQuery" : sendQuery,
-                    "getHasil" : getHasil,
-                    }
-                }
-        else:
-            return {
-                "message": "query sentence not found"
+                "data" : result
             }
 
 api.add_resource(Api, '/')

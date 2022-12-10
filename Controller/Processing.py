@@ -42,3 +42,19 @@ class Processing:
                 'value'] not in hasil):
                 hasil.append(self.__resultQuery['results']['bindings'][x]['name']['value'])
         return(hasil)
+
+    def process(self, masukan):
+        self.setInput(masukan)
+        getInput = self.getInput()
+        getQuery = self.getQuery()
+        setSparQL = self.setSparQL()
+        sendQuery = self.sendQuery()
+        getHasil = self.getHasil()
+
+        return {
+            "getInput" : getInput,
+            "getQuery" : getQuery,
+            "setSparQL":setSparQL,
+            "sendQuery" : sendQuery,
+            "getHasil" : getHasil,
+        }
