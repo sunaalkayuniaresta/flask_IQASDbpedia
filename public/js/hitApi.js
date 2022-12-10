@@ -12,8 +12,8 @@ $("#submit").click(function (e) {
       url: "http://127.0.0.1:5000/?sentence=" + $("#pertanyaan").val(),
       success: function (data, status, xhr) {
         console.log("data: ", data);
-        $("#query").val(data.set_sparql)
-        $("#jawaban").val(data.get_hasil)
+        $("#query").val(data.data.setSparQL)
+        $("#jawaban").val(data.data.getHasil)
         $("#table").show();
       },
     });
